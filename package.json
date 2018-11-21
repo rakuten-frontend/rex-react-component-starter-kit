@@ -1,0 +1,63 @@
+{
+  "name": "rex-react-component-starter-kit",
+  "version": "1.0.0",
+  "description": "ReX React UI Component",
+  "main": "MyComponent.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run storybook",
+    "build": "npm run build:component && npm run build:storybook",
+    "build:patch": "npm version patch -m 'New version - v%s' && npm run build",
+    "build:minor": "npm version minor -m 'New version - v%s' && npm run build",
+    "build:major": "npm version major -m 'New version - v%s' && npm run build",
+    "build:component": "NODE_ENV=production ./node_modules/.bin/webpack --mode=production --config webpack.config.js",
+    "build:storybook": "NODE_ENV=production ./node_modules/.bin/build-storybook -c .storybook -o docs/$npm_package_name",
+    "storybook": "NODE_ENV=development ./node_modules/.bin/start-storybook -p 8080 --ci",
+    "serve": "NODE_ENV=production ./node_modules/.bin/http-server -p 8081 ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakuten-frontend/rex-react-component-starter-kit.git"
+  },
+  "author": "ReX React UI Components Library Authors (https://github.com/rakuten-frontend/rex-react-component-starter-kit/graphs/contributors)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rakuten-frontend/rex-react-component-starter-kit/issues"
+  },
+  "homepage": "https://rakuten-frontend.github.io/rex-react-component-starter-kit/",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@storybook/addon-a11y": "^4.0.6",
+    "@storybook/addon-actions": "^4.0.6",
+    "@storybook/addon-info": "^4.0.6",
+    "@storybook/addon-knobs": "^4.0.6",
+    "@storybook/addon-options": "^4.0.7",
+    "@storybook/addon-viewport": "^4.0.6",
+    "@storybook/react": "^4.0.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "google-closure-compiler-js": "^20180610.0.0",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "storybook-host": "^5.0.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "rex-core": "0.0.3",
+    "rex-header": "0.0.1"
+  }
+}
