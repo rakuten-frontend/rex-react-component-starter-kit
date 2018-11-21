@@ -1,7 +1,8 @@
 # ReX React UI Components Library
 ## ReX Component Started Kit
 
-This project is part of Rex Design Language and it can be used to create React UI Components.
+This project is part of ReX Design Language and it can be used to create React UI Components.   
+For more information visit https://github.com/rakuten-frontend .
 
 ## How it was built 
 
