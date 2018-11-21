@@ -1,6 +1,6 @@
 {
   "name": "rex-react-component-starter-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ReX React UI Component",
   "main": "MyComponent.jsx",
   "scripts": {
@@ -11,7 +11,7 @@
     "build:minor": "npm version minor -m 'New version - v%s' && npm run build",
     "build:major": "npm version major -m 'New version - v%s' && npm run build",
     "build:component": "NODE_ENV=production ./node_modules/.bin/webpack --mode=production --config webpack.config.js",
-    "build:storybook": "NODE_ENV=production ./node_modules/.bin/build-storybook -c .storybook -o docs/$npm_package_name",
+    "build:storybook": "NODE_ENV=production ./node_modules/.bin/build-storybook -c .storybook -o docs",
     "storybook": "NODE_ENV=development ./node_modules/.bin/start-storybook -p 8080 --ci",
     "serve": "NODE_ENV=production ./node_modules/.bin/http-server -p 8081 ./docs"
   },
