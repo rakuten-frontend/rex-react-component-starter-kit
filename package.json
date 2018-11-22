@@ -57,7 +57,6 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "rex-core": "0.0.3",
-    "rex-header": "0.0.1"
+    "rex-core": "0.0.3"
   }
 }
