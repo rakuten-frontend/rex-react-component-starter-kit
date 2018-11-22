@@ -25,50 +25,46 @@ Use it as a basement and reference for your own project and customize it as you 
 
 If you need a full environment to create a React Web App, try the react-create-app to get a full environment for your App or use any other started kit.
 
-## How to install
+## How to start to work
 
-```
-npm install
-```
+Clone it and test it in your local environment:  
+1. Create your new repository and set-up your `local working folder`.
+1. Clone or download this project into a new folder.
+1. Import the code from `rex-react-component-starter-kit` to your `local working folder`.
+1. Then run `npm install`.
+1. Finally, check if is working at your localhost http://localhost:8080
 
-## How to use it in 3 steps
+## How to create your own component in 5 steps
 
 Notes:  
 `MyComponent` : is the default sample name, change it to your component name.   
+`YourComponent` : is the sample name for your new component.   
 `PACKAGE_NAME`: is the reference to the package.json name field of your project, change it to your package name.
 
-### STEP 1: Component source code
+### STEP 1: Package settings
 
-Change this file for your own component.
+Edit the files `package.json`, `package-lock.json` and replace all text from `rex-react-component-starter-kit` to `PACKAGE_NAME`.
 
-```
-./src/MyComponent.jsx
-```
+### STEP 2: File settings
 
-### STEP 2: Webpack entry point
+Edit the files `./src/MyComponent.jsx`, `./src/MyComponent.scss` and replace filename text from `MyComponent` to `YourComponent`.
 
-Open the webpack config file from `./webpack.conf.js` and then add your own component:
+### STEP 3: Component settings
 
-```
-entry[packageName] = './src/MyComponent.jsx';
-```
+Edit the content of `./src/YourComponent.jsx` and replace the search match of `MyComponent` to `YourComponent`.
 
-### STEP 3: Storybook project
+### STEP 4: Stories settings
 
-Open storybook `./stories/index.jsx` and then add your own component:
+Edit the content of `./stories/index.jsx` and replace the search match of `MyComponent` to `YourComponent`.
 
-```
-const MyComponent = (
-  process.env.NODE_ENV === 'production' ? 
-  require('../build/node_modules/PACKAGE_NAME') : 
-  require('../src/MyComponent').default
-);
-```
+### STEP 5: Webpack settings
+
+Edit the content of `./webpack.conf.js` and replace the search match of `MyComponent` to `YourComponent`.   
+
 
 ## How to start the project
 
-The development environment is based on Storybook, for more info visit https://storybook.js.org/     
-
+The development environment is based on Storybook, for more info visit https://storybook.js.org/ .   
 
 ```
 npm start
