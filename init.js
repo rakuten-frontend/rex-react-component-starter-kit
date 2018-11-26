@@ -4,14 +4,16 @@ const fs = require('fs');
 const PACKAGE_NAME = 'rex-text';
 const COMPONENT_NAME = 'Text';
 
-// Update tasks, don't edit the content from here
+// Don't edit the content from here
+// Set files
 setPackageJson(PACKAGE_NAME, COMPONENT_NAME);
 setJsxFilename(COMPONENT_NAME);
 setScssFilename(COMPONENT_NAME);
-
+// Set content
 setJsxContent(PACKAGE_NAME, COMPONENT_NAME);
 setScssContent(PACKAGE_NAME, COMPONENT_NAME);
 setStoriesContent(PACKAGE_NAME, COMPONENT_NAME);
+setWebpackContent(COMPONENT_NAME);
 
 function setJsxContent(packageName, componentName) {
   const componentFilename = `src/${componentName}.jsx`;
@@ -28,6 +30,11 @@ function setStoriesContent(packageName, componentName) {
   const componentFilename = `stories/index.jsx`;
   setFileContent(componentFilename, 'MyComponent', componentName);
   setFileContent(componentFilename, 'rex-react-component-starter-kit', packageName);
+}
+
+function setWebpackContent(componentName) {
+  const componentFilename = `webpack.config.js`;
+  setFileContent(componentFilename, 'MyComponent', componentName);
 }
 
 function setFileContent(componentFilename, pattern, text) {
