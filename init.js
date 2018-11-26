@@ -4,10 +4,39 @@ const fs = require('fs');
 const PACKAGE_NAME = 'rex-text';
 const COMPONENT_NAME = 'Text';
 
-// Update tasks, don't edit the content
+// Update tasks, don't edit the content from here
 setPackageJson(PACKAGE_NAME, COMPONENT_NAME);
 setJsxFilename(COMPONENT_NAME);
 setScssFilename(COMPONENT_NAME);
+
+setJsxContent(PACKAGE_NAME, COMPONENT_NAME);
+setScssContent(PACKAGE_NAME, COMPONENT_NAME);
+setStoriesContent(PACKAGE_NAME, COMPONENT_NAME);
+
+function setJsxContent(packageName, componentName) {
+  const componentFilename = `src/${componentName}.jsx`;
+  setFileContent(componentFilename, 'MyComponent', componentName);
+  setFileContent(componentFilename, 'my-component', packageName);
+}
+
+function setScssContent(packageName, componentName) {
+  const componentFilename = `src/${componentName}.scss`;
+  setFileContent(componentFilename, 'my-component', packageName);
+}
+
+function setStoriesContent(packageName, componentName) {
+  const componentFilename = `stories/index.jsx`;
+  setFileContent(componentFilename, 'MyComponent', componentName);
+  setFileContent(componentFilename, 'rex-react-component-starter-kit', packageName);
+}
+
+function setFileContent(componentFilename, pattern, text) {
+  const original = fs.readFileSync(componentFilename, 'utf8');
+
+  const componenContent = original.replace(new RegExp(pattern, 'g'), text);
+
+  fs.writeFileSync(componentFilename, componenContent);
+}
 
 function setJsxFilename(componentName) {
   fs.renameSync('src/MyComponent.jsx', `src/${componentName}.jsx`);
