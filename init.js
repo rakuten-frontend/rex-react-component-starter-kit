@@ -6,9 +6,11 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-console.log(`===========================================`);
-console.log(`Welcome to ReX React UI Component generator`);
-console.log(`===========================================`);
+console.log(`
+===========================================
+Welcome to ReX React UI Component generator
+===========================================
+`);
 
 rl.question('\nPackage name (ex: rex-text): ', (packageName) => {
 
@@ -73,12 +75,12 @@ function init(packageName, componentName) {
   setWebpackContent(componentName);
 
   console.log(`
-  ===========================================
-  Setup finished.
-  ===========================================
+===========================================
+Setup finished.
+===========================================
 
-  Running NPM install and Storybook, please wait.
-  
+Running NPM install and Storybook, please wait.
+
   `);
 }
 
