@@ -18,7 +18,7 @@ npm install __COMPONENT_NAME__ --save
 
 ## How to add it to your project
 
-### Javascrip Import (ES6)
+### JavaScript Import (ES6)
 
 ```
 import RexComponent from '__COMPONENT_NAME__';
