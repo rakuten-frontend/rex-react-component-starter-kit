@@ -71,6 +71,15 @@ function init(packageName, componentName) {
   setScssContent(packageName, componentName);
   setStoriesContent(packageName, componentName);
   setWebpackContent(componentName);
+
+  console.log(`
+  ===========================================
+  Setup finished.
+  ===========================================
+
+  Running NPM install and Storybook, please wait.
+  
+  `);
 }
 
 // Functions and helpers
