@@ -4,16 +4,24 @@ const fs = require('fs');
 const PACKAGE_NAME = 'rex-text';
 const COMPONENT_NAME = 'Text';
 
+//////////////////////////////////////////////////
 // Don't edit the content from here
+//////////////////////////////////////////////////
+// INIT Process to set component name and content
+removeNodeModules();
+
 // Set files
 setPackageJson(PACKAGE_NAME, COMPONENT_NAME);
 setJsxFilename(COMPONENT_NAME);
 setScssFilename(COMPONENT_NAME);
+
 // Set content
 setJsxContent(PACKAGE_NAME, COMPONENT_NAME);
 setScssContent(PACKAGE_NAME, COMPONENT_NAME);
 setStoriesContent(PACKAGE_NAME, COMPONENT_NAME);
 setWebpackContent(COMPONENT_NAME);
+
+// Functions and helpers
 
 function setJsxContent(packageName, componentName) {
   const componentFilename = `src/${componentName}.jsx`;
@@ -65,8 +73,27 @@ function setPackageJson(packageName, componentName) {
   package.author = package.author.replace(starterKitName, packageName);
   package.bugs.url = package.bugs.url.replace(starterKitName, packageName);
   package.homepage = package.homepage.replace(starterKitName, packageName);
-  
+
   const fileContent = JSON.stringify(package, null, 2);
 
   fs.writeFileSync(file, fileContent);
+}
+
+function removeNodeModules() {
+  
+  const deleteFolderRecursive = function (path) {
+    if (fs.existsSync(path)) {
+      fs.readdirSync(path).forEach(function (file) {
+        const curPath = path + '/' + file;
+        if (fs.lstatSync(curPath).isDirectory()) {
+          deleteFolderRecursive(curPath);
+        } else {
+          fs.unlinkSync(curPath);
+        }
+      });
+      fs.rmdirSync(path);
+    }
+  };
+
+  deleteFolderRecursive('./node_modules');
 }
