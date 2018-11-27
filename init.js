@@ -1,48 +1,108 @@
 const fs = require('fs');
+const readline = require('readline');
 
-// Add your own package name and component name
-const PACKAGE_NAME = 'rex-text';
-const COMPONENT_NAME = 'Text';
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-//////////////////////////////////////////////////
-// Don't edit the content from here
-//////////////////////////////////////////////////
+console.log(`===========================================`);
+console.log(`Welcome to ReX React UI Component generator`);
+console.log(`===========================================`);
+
+rl.question('\nPackage name (ex: rex-text): ', (packageName) => {
+
+  rl.question('Component name (ex: Text): ', (componentName) => {
+
+    if ((packageName.trim().length > 0) && (componentName.trim().length > 0)) {
+
+      console.log(`\n\nThe new component will update this files and contents: \n`);
+      console.log(`./package.json: \n
+        {
+          name: "${packageName}"
+          ...
+        }
+      `);
+
+      console.log(`./src: \n
+        MyComponent.jsx -> ${componentName}.jsx
+        MyComponent.scss -> ${componentName}.scss
+      `);
+
+      console.log(`./stories/index.jsx: \n
+        const stories = storiesOf('MyComponent', module); -> const stories = storiesOf('${componentName}', module);
+        ...
+      `);
+
+      console.log(`./webpack.config.js: \n
+        const entry = {};
+        entry[package.name] = './src/${componentName}.jsx';
+      `);
+
+      rl.question('Are you sure you want to proceed? (y/n) ', (answer) => {
+        
+        if (answer == 'y') {
+          console.log(`Initial setup started... \n`);
+          init(packageName, componentName);
+        } else {
+          console.log(`Nothing done, see you! \n`);
+        }
+
+        rl.close();
+      });
+    } else {
+      console.log(`Make sure the package name and component name are not empty and try again.`);
+      rl.close();
+    }
+  });
+});
+
 // INIT Process to set component name and content
-removeNodeModules();
+function init(packageName, componentName) {
+  removeNodeModules();
 
-// Set files
-setPackageJson(PACKAGE_NAME, COMPONENT_NAME);
-setJsxFilename(COMPONENT_NAME);
-setScssFilename(COMPONENT_NAME);
+  // Set files
+  setPackageJson(packageName, componentName);
+  setJsxFilename(componentName);
+  setScssFilename(componentName);
 
-// Set content
-setJsxContent(PACKAGE_NAME, COMPONENT_NAME);
-setScssContent(PACKAGE_NAME, COMPONENT_NAME);
-setStoriesContent(PACKAGE_NAME, COMPONENT_NAME);
-setWebpackContent(COMPONENT_NAME);
+  // Set content
+  setJsxContent(packageName, componentName);
+  setScssContent(packageName, componentName);
+  setStoriesContent(packageName, componentName);
+  setWebpackContent(componentName);
+}
 
 // Functions and helpers
 
 function setJsxContent(packageName, componentName) {
-  const componentFilename = `src/${componentName}.jsx`;
-  setFileContent(componentFilename, 'MyComponent', componentName);
-  setFileContent(componentFilename, 'my-component', packageName);
+  const filename = `src/${componentName}.jsx`;
+  console.log(`- Updating content of ${filename}`);
+  setFileContent(filename, 'MyComponent', componentName);
+  setFileContent(filename, 'my-component', packageName);
+  console.log(`Done`);
 }
 
 function setScssContent(packageName, componentName) {
-  const componentFilename = `src/${componentName}.scss`;
-  setFileContent(componentFilename, 'my-component', packageName);
+  const filename = `src/${componentName}.scss`;
+  console.log(`- Updating content of ${filename}`);
+  setFileContent(filename, 'my-component', packageName);
+  console.log(`Done`);
 }
 
 function setStoriesContent(packageName, componentName) {
-  const componentFilename = `stories/index.jsx`;
-  setFileContent(componentFilename, 'MyComponent', componentName);
-  setFileContent(componentFilename, 'rex-react-component-starter-kit', packageName);
+  const filename = `stories/index.jsx`;
+  console.log(`- Updating content of ${filename}`);
+  setFileContent(filename, 'MyComponent', componentName);
+  setFileContent(filename, 'rex-react-component-starter-kit', packageName);
+  console.log(`Done`);
 }
 
 function setWebpackContent(componentName) {
-  const componentFilename = `webpack.config.js`;
-  setFileContent(componentFilename, 'MyComponent', componentName);
+  const filename = `webpack.config.js`;
+  console.log(`- Updating content of ${filename}`);
+  setFileContent(filename, 'MyComponent', componentName);
+  console.log(`Done`);
 }
 
 function setFileContent(componentFilename, pattern, text) {
@@ -54,14 +114,19 @@ function setFileContent(componentFilename, pattern, text) {
 }
 
 function setJsxFilename(componentName) {
+  console.log(`- Changing src/MyComponent.jsx to src/${componentName}.jsx`);
   fs.renameSync('src/MyComponent.jsx', `src/${componentName}.jsx`);
+  console.log(`Done`);
 }
 
 function setScssFilename(componentName) {
+  console.log(`- Changing src/MyComponent.scss to src/${componentName}.scss`);
   fs.renameSync('src/MyComponent.scss', `src/${componentName}.scss`);
+  console.log(`Done`);
 }
 
 function setPackageJson(packageName, componentName) {
+  console.log('- Updating package.json information');
   const componentFilename = `src/${componentName}.jsx`;
   const file = './package.json';
   const starterKitName = 'rex-react-component-starter-kit';
@@ -77,10 +142,13 @@ function setPackageJson(packageName, componentName) {
   const fileContent = JSON.stringify(package, null, 2);
 
   fs.writeFileSync(file, fileContent);
+
+  console.log('Done');
 }
 
 function removeNodeModules() {
-  
+  console.log('- Removing node_modules');
+
   const deleteFolderRecursive = function (path) {
     if (fs.existsSync(path)) {
       fs.readdirSync(path).forEach(function (file) {
@@ -96,4 +164,5 @@ function removeNodeModules() {
   };
 
   deleteFolderRecursive('./node_modules');
+  console.log('Done');
 }
