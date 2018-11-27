@@ -27,45 +27,17 @@ If you need a full environment to create a React Web App, try the react-create-a
 
 ## How to start to work
 
-Clone it and test it in your local environment:  
-1. Create your new repository and set-up your `local working folder`.
-1. Clone or download this project into a new folder.
-1. Import the code from `rex-react-component-starter-kit` to your `local working folder`.
-1. Then run `npm install`.
-1. Finally, check if is working at your localhost http://localhost:8080
+1. Create your `new git repository`.
+1. Clone or download this project.
+1. Import the code from `rex-react-component-starter-kit` to your `new git repository`.
 
-## How to create your own component in 5 steps
+## Initial setup
 
-Notes:  
-`MyComponent` : is the default sample name, change it to your component name.   
-`YourComponent` : is the sample name for your new component.   
-`PACKAGE_NAME`: is the reference to the package.json name field of your project, change it to your package name.
+Run this command for first time only to initialize your project.   
 
-### STEP 1: Package settings
-
-Edit the files `package.json`, `package-lock.json` and:   
-- replace all text from `rex-react-component-starter-kit` to `PACKAGE_NAME`.   
-- replace version attribute to `0.0.1`.  
-- replace main attribute from `MyComponent.jsx` to `YourComponent.jsx`.   
-
-### STEP 2: File settings
-
-Edit the files `./src/MyComponent.jsx`, `./src/MyComponent.scss` and:
-- replace filename text from `MyComponent.jsx` to `YourComponent.jsx`.
-- replace filename text from `MyComponent.scss` to `YourComponent.scss`.
-
-### STEP 3: Component settings
-
-Edit the content of `./src/YourComponent.jsx` and replace the search match of `MyComponent` to `YourComponent`.
-
-### STEP 4: Stories settings
-
-Edit the content of `./stories/index.jsx` and replace the search match of `MyComponent` to `YourComponent`.
-
-### STEP 5: Webpack settings
-
-Edit the content of `./webpack.config.js` and replace the search match of `MyComponent` to `YourComponent`.   
-
+```
+npm run init:component
+```
 
 ## How to start the project
 
