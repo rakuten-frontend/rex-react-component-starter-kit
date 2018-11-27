@@ -31,6 +31,8 @@ If you need a full environment to create a React Web App, try the react-create-a
 1. Clone or download this project.
 1. Import the code from `rex-react-component-starter-kit` to your `new git repository`.
 
+Note: Don't forget to import the hidden dot config files such as .babelrc, .gitignore, .storybook, etc.
+
 ## Initial setup
 
 Run this command for first time only to initialize your project.   
