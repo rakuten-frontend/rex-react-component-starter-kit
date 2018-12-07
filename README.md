@@ -51,7 +51,7 @@ npm start
 
 ## How to build
 
-The build task will generate a NPM package ready to be published and also a static version of Storybook, one folder for NPM `./build/node_modules/PACKAGE_NAME` and other one for Github pages `./docs/PACKAGE_NAME`.   
+The build task will generate a NPM package ready to be published and also a static version of Storybook, one folder for NPM `./build/node_modules/PACKAGE_NAME` and other one for Github pages `./docs`.   
 
 ```
 npm run build
