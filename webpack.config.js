@@ -217,20 +217,7 @@ const webpackConfig = {
     minimizer: [
       googleClosureCompiler,
       optimizeCss
-    ],
-    splitChunks: {
-      chunks: 'all',
-      name: true,
-      cacheGroups: {
-        react: {
-          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-          name: 'react',
-          chunks: 'all',
-          priority: 2,
-          reuseExistingChunk: true
-        },
-      }
-    }
+    ]
   }
 };
 
