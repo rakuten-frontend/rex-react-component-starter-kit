@@ -5,6 +5,7 @@ import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs
 import { withInfo } from '@storybook/addon-info';
 import { checkA11y } from '@storybook/addon-a11y';
 import { host } from 'storybook-host';
+import { withInspectHtml } from 'storybook-inspecthtml';
 
 const MyComponent = (
   process.env.NODE_ENV === 'production' ?
@@ -13,6 +14,7 @@ const MyComponent = (
 );
 
 const stories = storiesOf('MyComponent', module);
+stories.addDecorator(withInspectHtml);
 stories.addDecorator(checkA11y);
 stories.addDecorator(withKnobs);
 stories.addDecorator(withInfo);
