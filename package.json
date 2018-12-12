@@ -1,6 +1,6 @@
 {
   "name": "rex-react-component-starter-kit",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "ReX React UI Component",
   "main": "src/MyComponent.jsx",
   "scripts": {
