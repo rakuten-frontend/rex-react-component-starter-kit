@@ -13,6 +13,12 @@ module.exports = {
           'sass-loader'
         ],
         include: path.resolve(__dirname, '../')
+      },
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        include: path.resolve(__dirname, '../src/'),
       }
     ]
   },
