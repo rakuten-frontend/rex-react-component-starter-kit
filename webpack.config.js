@@ -39,6 +39,9 @@ const eslintLoader = {
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
   loader: 'eslint-loader',
+  options: {
+    fix: true,
+  },
 }
 
 // Babel support for ES6+
