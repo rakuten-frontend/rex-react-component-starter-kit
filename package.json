@@ -15,7 +15,8 @@
     "build:storybook": "NODE_ENV=production ./node_modules/.bin/build-storybook -c .storybook -o docs",
     "storybook": "NODE_ENV=development ./node_modules/.bin/start-storybook -p 8080 --ci",
     "serve": "NODE_ENV=production ./node_modules/.bin/http-server -p 8081 ./docs",
-    "eslint": "eslint --fix './src/*.{js,jsx}'"
+    "eslint": "eslint --fix './src/*.{js,jsx}'",
+    "prettier": "prettier --write './src/*.{js,jsx}'"
   },
   "repository": {
     "type": "git",
