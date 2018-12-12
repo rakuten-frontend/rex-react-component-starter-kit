@@ -42,7 +42,7 @@ stories.add('with children', () => {
 
   return (
     <MyComponent>
-      <h2>Hello World</h2>
+      <p>Hello World</p>
     </MyComponent>
   );
 });
