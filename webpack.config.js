@@ -33,6 +33,14 @@ const output = {
   jsonpFunction: `${libraryName}OnDemand`
 };
 
+// Eslint
+const eslintLoader = {
+  enforce: "pre",
+  test: /\.(js|jsx)$/,
+  exclude: /node_modules/,
+  loader: 'eslint-loader',
+}
+
 // Babel support for ES6+
 const babelLoader = {
   test: /\.(js|jsx)$/,
@@ -202,6 +210,7 @@ const webpackConfig = {
   module: {
     rules: [
       babelLoader,
+      eslintLoader,
       stylesLoader,
       fileLoader
     ]
