@@ -83,6 +83,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "rex-core": "0.0.3"
