@@ -1,6 +1,6 @@
 module.exports = {
   "extends": [
-    "airbnb",
+    "rex-react-component",
     "plugin:prettier/recommended"
   ],
   "parser": "babel-eslint"
