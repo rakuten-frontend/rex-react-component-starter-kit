@@ -5,15 +5,12 @@ import './MyComponent.scss';
 
 export default function MyComponent({ children, onClick, text, className }) {
   return (
-    <div
-      className={className}
-      onClick={onClick}
-      role="link"
-      tabIndex={0}
-      onKeyDown={onClick}
-    >
+    <div className={className}>
       <h1>{text}</h1>
       {children}
+      <button type="button" onClick={onClick}>
+        Click me!
+      </button>
     </div>
   );
 }
