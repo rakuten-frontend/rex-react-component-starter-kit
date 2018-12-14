@@ -20,7 +20,7 @@ module.exports = {
         loader: 'eslint-loader',
         include: path.resolve(__dirname, '../src/'),
         options: {
-          fix: true,
+          fix: false,
         },
       },
     ],
