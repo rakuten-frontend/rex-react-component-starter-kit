@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'rex-core/dist/css/rex-core.css';
+import 'rex-core';
 import './MyComponent.scss';
 
 export default function MyComponent({

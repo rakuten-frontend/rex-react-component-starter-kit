@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { checkA11y } from '@storybook/addon-a11y';
-import { host } from 'storybook-host';
 import { withInspectHtml } from 'storybook-inspecthtml';
 
 const MyComponent = (
@@ -18,13 +17,7 @@ stories.addDecorator(withInspectHtml);
 stories.addDecorator(checkA11y);
 stories.addDecorator(withKnobs);
 stories.addDecorator(withInfo);
-stories.addDecorator(
-  host({
-    align: 'center bottom',
-    height: '80%',
-    width: 425,
-  }),
-);
+
 // Stories
 stories.add('default', () => <MyComponent />);
 stories.add('with text', () => <MyComponent text={'Welcome to React example'} />);

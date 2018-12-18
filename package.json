@@ -50,7 +50,6 @@
     "node-sass": "^4.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
-    "storybook-host": "^5.0.3",
     "storybook-inspecthtml": "0.0.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.21.0",
@@ -60,6 +59,6 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "rex-core": "0.0.3"
+    "rex-core": "^1.1.0"
   }
 }
