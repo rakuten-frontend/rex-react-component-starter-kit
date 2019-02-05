@@ -1,31 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, func, element, oneOfType } from 'prop-types';
 import 'rex-core';
 import './MyComponent.scss';
 
-export default function MyComponent({
-  children,
-  onClick,
-  text,
-  className
-}) {
-
+export default function MyComponent({ children, onClick, text, className }) {
   return (
-    <div className={className} onClick={onClick}>
+    <div className={className} onClick={onClick} role="presentation">
       <h1>{text}</h1>
       {children}
     </div>
   );
-};
+}
 
 MyComponent.defaultProps = {
+  children: null,
   text: 'Welcome to React',
   className: 'my-component',
-  onClick: () => { }
+  onClick: () => null,
 };
 
 MyComponent.propTypes = {
-  text: PropTypes.string,
-  className: PropTypes.string, 
-  onClick: PropTypes.func
+  children: oneOfType([string, element]),
+  text: string,
+  className: string,
+  onClick: func,
 };
