@@ -13,6 +13,7 @@ const libraryName = packageInfo.name
   .replace(/(\b|-)\w/g, m => m.toUpperCase().replace(/-/, ''));
 const pathSrc = pathResolve('./src');
 const pathNodeModules = pathResolve('./node_modules');
+const pathRoot = pathResolve('./');
 
 // Webpack entry and output settings
 const entry = {};
@@ -189,6 +190,20 @@ const npmPackagePlugin = new CopyWebpackPlugin([
   },
 ]);
 
+// Current project README file
+const mdReadmePlugin = new CopyWebpackPlugin([
+  {
+    from: './markdown/README.md',
+    to: `${pathRoot}/README.md`,
+    transform(content) {
+      return content
+        .toString()
+        .replace(/__COMPONENT_NAME__/g, packageInfo.name)
+        .replace(/__VERSION__/g, packageInfo.version);
+    },
+  },
+]);
+
 // License
 const npmLicencePlugin = new CopyWebpackPlugin([
   {
@@ -238,6 +253,7 @@ const production = merge(webpackConfig, {
     npmReadmePlugin,
     npmPackagePlugin,
     npmLicencePlugin,
+    mdReadmePlugin,
   ],
 });
 
