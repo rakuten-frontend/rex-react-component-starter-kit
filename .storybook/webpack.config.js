@@ -9,8 +9,8 @@ module.exports = {
         test: /\.(css|scss)$/,
         loaders: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader', 
-          'sass-loader'
+          'css-loader',
+          'sass-loader',
         ],
         include: path.resolve(__dirname, '../')
       },
@@ -25,4 +25,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+  ],
 };
