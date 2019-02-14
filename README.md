@@ -20,7 +20,7 @@ https://www.npmjs.com/org/rakuten-frontend
 # How to install
 
 ```
-npm install rex-react-component-starter-kit@1.7.0 --save
+npm install rex-react-component-starter-kit@1.7.1 --save
 ```
 
 ## What you can do
@@ -56,13 +56,13 @@ Add it from our CDN into your HTML template or HTML static page.
 For development mode:
 
 ```markdown
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.0/rex-react-component-starter-kit.development.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.1/rex-react-component-starter-kit.development.css" rel="stylesheet">
 ```
 
 For production mode:
 
 ```markdown
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.0/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.1/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
 ```
 
 Example: 
