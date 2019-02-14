@@ -1,12 +1,13 @@
 {
   "name": "rex-react-component-starter-kit",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "ReX React UI Component",
   "main": "src/MyComponent.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "init:component": "node init.js && npm i && npm start",
     "start": "npm run storybook",
+    "build": "npm run build:component && npm run build:storybook",
     "build:patch": "npm --no-git-tag-version version patch && npm run build && npm run commit",
     "build:minor": "npm --no-git-tag-version version minor && npm run build && npm run commit",
     "build:major": "npm --no-git-tag-version version major && npm run build && npm run commit",
