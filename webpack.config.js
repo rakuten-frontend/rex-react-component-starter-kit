@@ -166,7 +166,8 @@ const npmReadmePlugin = new CopyWebpackPlugin([
     transform(content) {
       return content
         .toString()
-        .replace(/__COMPONENT_NAME__/g, packageInfo.name);
+        .replace(/__COMPONENT_NAME__/g, packageInfo.name)
+        .replace(/__VERSION__/g, packageInfo.version);
     },
   },
 ]);

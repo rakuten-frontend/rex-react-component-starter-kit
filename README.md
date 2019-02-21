@@ -39,6 +39,10 @@ https://rakuten-frontend.github.io/rex-react-component-starter-kit/
 
 ### JavaScript modules
 
+#### React component (JavaScript + CSS Styles)
+
+For plug and play components integration.   
+
 Example: 
 
 ```js
@@ -46,6 +50,20 @@ import RexComponent from 'rex-react-component-starter-kit';
 
 function MyComponent() {
   return <RexComponent>Hello World</RexComponent>;
+}
+```
+
+#### CSS Styles only
+
+For your own JavaScript integration (React, Vue, Angular, etc.) or Static HTML.
+
+Example: 
+
+```js
+import 'rex-react-component-starter-kit/css';
+
+function MyComponent() {
+  return <div className="rex-css-style my-component">Hello World</div>;
 }
 ```
 
@@ -68,7 +86,7 @@ For production mode:
 Example: 
 
 ```markdown
-<div class="my-component">
+<div class="rex-css-style my-component">
   <h1>Welcome to React</h1>
 </div>
 ```
