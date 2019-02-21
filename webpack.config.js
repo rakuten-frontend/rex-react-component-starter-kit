@@ -190,6 +190,18 @@ const npmPackagePlugin = new CopyWebpackPlugin([
   },
 ]);
 
+const npmCssIndexJSPlugin = new CopyWebpackPlugin([
+  {
+    from: './npm/css/index.tpl',
+    to: `css/index.js`,
+    transform(content) {
+      return content
+        .toString()
+        .replace(/__COMPONENT_NAME__/g, packageInfo.name);
+    },
+  },
+]);
+
 // Current project README file
 const mdReadmePlugin = new CopyWebpackPlugin([
   {
@@ -253,6 +265,7 @@ const production = merge(webpackConfig, {
     npmReadmePlugin,
     npmPackagePlugin,
     npmLicencePlugin,
+    npmCssIndexJSPlugin,
     mdReadmePlugin,
   ],
 });
