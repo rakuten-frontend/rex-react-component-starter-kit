@@ -1,6 +1,5 @@
 import React from 'react';
 import { string, func, element, oneOfType } from 'prop-types';
-import 'rex-core';
 import './MyComponent.scss';
 
 export default function MyComponent({ children, onClick, text, className }) {
