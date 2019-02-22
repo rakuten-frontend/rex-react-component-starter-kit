@@ -46,6 +46,7 @@ For plug and play components integration.
 Example: 
 
 ```js
+import 'rex-core'; // ReX Core dependency
 import RexComponent from '__COMPONENT_NAME__';
 
 function MyComponent() {
@@ -60,6 +61,7 @@ For your own JavaScript integration (React, Vue, Angular, etc.) or Static HTML.
 Example: 
 
 ```js
+import 'rex-core/css'; // ReX Core dependency
 import '__COMPONENT_NAME__/css';
 
 function MyComponent() {
@@ -74,12 +76,18 @@ Add it from our CDN into your HTML template or HTML static page.
 For development mode:
 
 ```markdown
+<!-- ReX Core -->
+<link href="https://r.r10s.jp/com/rex/rex-core/__REX_CORE_VERSION__/rex-core.development.css" rel="stylesheet">
+<!-- __COMPONENT_NAME__ -->
 <link href="https://r.r10s.jp/com/rex/__COMPONENT_NAME__/__VERSION__/__COMPONENT_NAME__.development.css" rel="stylesheet">
 ```
 
 For production mode:
 
 ```markdown
+<!-- ReX Core -->
+<link href="https://r.r10s.jp/com/rex/rex-core/__REX_CORE_VERSION__/rex-core.production.min.css" rel="stylesheet">
+<!-- __COMPONENT_NAME__ -->
 <link href="https://r.r10s.jp/com/rex/__COMPONENT_NAME__/__VERSION__/__COMPONENT_NAME__.production.min.css" rel="stylesheet">
 ```
 

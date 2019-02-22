@@ -167,7 +167,8 @@ const npmReadmePlugin = new CopyWebpackPlugin([
       return content
         .toString()
         .replace(/__COMPONENT_NAME__/g, packageInfo.name)
-        .replace(/__VERSION__/g, packageInfo.version);
+        .replace(/__VERSION__/g, packageInfo.version)
+        .replace(/__REX_CORE_VERSION__/g, packageInfo.dependencies['rex-core']);
     },
   },
 ]);
@@ -186,7 +187,8 @@ const npmPackagePlugin = new CopyWebpackPlugin([
         .replace(
           /__REACT_DOM_VERSION__/g,
           packageInfo.dependencies['react-dom']
-        );
+        )
+        .replace(/__REX_CORE_VERSION__/g, packageInfo.dependencies['rex-core']);
     },
   },
 ]);
@@ -212,7 +214,8 @@ const mdReadmePlugin = new CopyWebpackPlugin([
       return content
         .toString()
         .replace(/__COMPONENT_NAME__/g, packageInfo.name)
-        .replace(/__VERSION__/g, packageInfo.version);
+        .replace(/__VERSION__/g, packageInfo.version)
+        .replace(/__REX_CORE_VERSION__/g, packageInfo.dependencies['rex-core']);
     },
   },
 ]);
