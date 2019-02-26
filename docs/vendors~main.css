@@ -1,14 +1,5 @@
 /*!
  * 
- * @license rex-react-component-starter-kit v1.7.1 2019-02-14
- * rex-react-component-starter-kit.production.min.css
- * 
- * Copyright (c) 2018-present, Rakuten, Inc.
- * 
- * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
- */
-/*!
- * 
  * @license rex-core v1.4.0 2019-02-07
  * rex-core.production.min.css
  * 
@@ -295,8 +286,17 @@ label {
   font-weight: 700; }
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,YuGothic,"\30D2\30E9\30AE\30CE\89D2\30B4       ProN W3",Hiragino Kaku Gothic ProN,Arial,"\30E1\30A4\30EA\30AA",Meiryo,sans-serif; }
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,YuGothic,"\30D2\30E9\30AE\30CE\89D2\30B4     ProN W3",Hiragino Kaku Gothic ProN,Arial,"\30E1\30A4\30EA\30AA",Meiryo,sans-serif; }
 
+/*!
+ * 
+ * @license rex-react-component-starter-kit v1.7.2 2019-02-26
+ * rex-react-component-starter-kit.production.min.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
 .my-component h1 {
   text-decoration: underline; }
 

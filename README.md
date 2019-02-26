@@ -20,7 +20,7 @@ https://www.npmjs.com/org/rakuten-frontend
 # How to install
 
 ```
-npm install rex-react-component-starter-kit@1.7.1 --save
+npm install rex-react-component-starter-kit@1.7.2 --save
 ```
 
 ## What you can do
@@ -46,6 +46,7 @@ For plug and play components integration.
 Example: 
 
 ```js
+import 'rex-core'; // ReX Core dependency
 import RexComponent from 'rex-react-component-starter-kit';
 
 function MyComponent() {
@@ -60,6 +61,7 @@ For your own JavaScript integration (React, Vue, Angular, etc.) or Static HTML.
 Example: 
 
 ```js
+import 'rex-core/css'; // ReX Core dependency
 import 'rex-react-component-starter-kit/css';
 
 function MyComponent() {
@@ -74,13 +76,19 @@ Add it from our CDN into your HTML template or HTML static page.
 For development mode:
 
 ```markdown
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.1/rex-react-component-starter-kit.development.css" rel="stylesheet">
+<!-- ReX Core -->
+<link href="https://r.r10s.jp/com/rex/rex-core/^1.4.0/rex-core.development.css" rel="stylesheet">
+<!-- rex-react-component-starter-kit -->
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.2/rex-react-component-starter-kit.development.css" rel="stylesheet">
 ```
 
 For production mode:
 
 ```markdown
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.1/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
+<!-- ReX Core -->
+<link href="https://r.r10s.jp/com/rex/rex-core/^1.4.0/rex-core.production.min.css" rel="stylesheet">
+<!-- rex-react-component-starter-kit -->
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.7.2/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
 ```
 
 Example: 
