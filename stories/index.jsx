@@ -5,6 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withInspectHtml } from 'storybook-inspecthtml';
+import { CenterDecorator } from '../.storybook/centerDecorator';
+import 'rex-core';
 
 const MyComponent =
   process.env.NODE_ENV === 'production'
@@ -13,6 +15,7 @@ const MyComponent =
 
 const stories = storiesOf('MyComponent', module);
 stories.addDecorator(withInspectHtml);
+stories.addDecorator(CenterDecorator);
 stories.addDecorator(checkA11y);
 stories.addDecorator(withKnobs);
 

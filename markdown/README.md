@@ -39,13 +39,33 @@ https://rakuten-frontend.github.io/__COMPONENT_NAME__/
 
 ### JavaScript modules
 
+#### React component (JavaScript + CSS Styles)
+
+For plug and play components integration.   
+
 Example: 
 
 ```js
+import 'rex-core'; // ReX Core dependency
 import RexComponent from '__COMPONENT_NAME__';
 
 function MyComponent() {
   return <RexComponent>Hello World</RexComponent>;
+}
+```
+
+#### CSS Styles only
+
+For your own JavaScript integration (React, Vue, Angular, etc.) or Static HTML.
+
+Example: 
+
+```js
+import 'rex-core/css'; // ReX Core dependency
+import '__COMPONENT_NAME__/css';
+
+function MyComponent() {
+  return <div className="rex-css-style my-component">Hello World</div>;
 }
 ```
 
@@ -56,19 +76,25 @@ Add it from our CDN into your HTML template or HTML static page.
 For development mode:
 
 ```markdown
+<!-- ReX Core -->
+<link href="https://r.r10s.jp/com/rex/rex-core/__REX_CORE_VERSION__/rex-core.development.css" rel="stylesheet">
+<!-- __COMPONENT_NAME__ -->
 <link href="https://r.r10s.jp/com/rex/__COMPONENT_NAME__/__VERSION__/__COMPONENT_NAME__.development.css" rel="stylesheet">
 ```
 
 For production mode:
 
 ```markdown
+<!-- ReX Core -->
+<link href="https://r.r10s.jp/com/rex/rex-core/__REX_CORE_VERSION__/rex-core.production.min.css" rel="stylesheet">
+<!-- __COMPONENT_NAME__ -->
 <link href="https://r.r10s.jp/com/rex/__COMPONENT_NAME__/__VERSION__/__COMPONENT_NAME__.production.min.css" rel="stylesheet">
 ```
 
 Example: 
 
 ```markdown
-<div class="my-component">
+<div class="rex-css-style my-component">
   <h1>Welcome to React</h1>
 </div>
 ```

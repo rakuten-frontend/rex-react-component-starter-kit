@@ -38,8 +38,14 @@
   "engines": {
     "node": ">=6"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "__REACT_VERSION__",
-    "react-dom": "__REACT_DOM_VERSION__"
+    "react-dom": "__REACT_DOM_VERSION__",
+    "rex-core": "__REX_CORE_VERSION__"
+  },
+  "devDependencies": {
+    "react": "__REACT_VERSION__",
+    "react-dom": "__REACT_DOM_VERSION__",
+    "rex-core": "__REX_CORE_VERSION__"
   }
 }
