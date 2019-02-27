@@ -62,7 +62,7 @@
     "babel-preset-react": "6.24.1",
     "clean-webpack-plugin": "1.0.1",
     "copy-webpack-plugin": "4.6.0",
-    "css-loader": "1.0.1",
+    "css-loader": "2.1.0",
     "eslint": "5.13.0",
     "eslint-config-prettier": "3.6.0",
     "eslint-config-rex-react-component": "1.2.0",
