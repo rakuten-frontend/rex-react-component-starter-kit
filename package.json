@@ -64,7 +64,7 @@
     "copy-webpack-plugin": "4.6.0",
     "css-loader": "1.0.1",
     "eslint": "5.13.0",
-    "eslint-config-prettier": "3.6.0",
+    "eslint-config-prettier": "4.1.0",
     "eslint-config-rex-react-component": "1.2.0",
     "eslint-loader": "2.1.1",
     "eslint-plugin-prettier": "3.0.1",
