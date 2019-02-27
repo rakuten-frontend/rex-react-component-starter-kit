@@ -1,7 +1,7 @@
 module.exports = {
-  "extends": [
-    "rex-react-component",
-    "plugin:prettier/recommended",
-  ],
-  "parser": "babel-eslint",
+  extends: ['rex-react-component', 'plugin:prettier/recommended'],
+  parser: 'babel-eslint',
+  env: {
+    browser: true,
+  },
 };
