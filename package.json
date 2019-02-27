@@ -4,7 +4,7 @@
   "description": "ReX React UI Component",
   "main": "src/MyComponent.jsx",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "init:component": "node init.js && npm i && npm start",
     "start": "npm run storybook",
     "build": "npm run build:component && npm run build:storybook",
