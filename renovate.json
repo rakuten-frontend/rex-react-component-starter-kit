@@ -1,5 +1,208 @@
 {
   "extends": [
     "config:base"
+  ],
+  "schedule": "before 9am on the first day of the month",
+  "packageRules": [
+    {
+      "packageNames": [
+        "react"
+      ],
+      "allowedVersions": "<=16"
+    },
+    {
+      "packageNames": [
+        "prop-types"
+      ],
+      "allowedVersions": "<=15"
+    },
+    {
+      "packageNames": [
+        "@babel/core"
+      ],
+      "allowedVersions": "<=7"
+    },
+    {
+      "packageNames": [
+        "@storybook/addon-a11y",
+        "@storybook/addon-actions",
+        "@storybook/addon-info",
+        "@storybook/addon-knobs",
+        "@storybook/addon-options",
+        "@storybook/addon-viewport",
+        "@storybook/addons",
+        "@storybook/components",
+        "@storybook/react"
+      ],
+      "allowedVersions": "<=4"
+    },
+    {
+      "packageNames": [
+        "babel-core"
+      ],
+      "allowedVersions": "<=6"
+    },
+    {
+      "packageNames": [
+        "babel-eslint"
+      ],
+      "allowedVersions": "<=10"
+    },
+    {
+      "packageNames": [
+        "babel-loader"
+      ],
+      "allowedVersions": "<=7"
+    },
+    {
+      "packageNames": [
+        "babel-plugin-transform-object-rest-spread"
+      ],
+      "allowedVersions": "<=6"
+    },
+    {
+      "packageNames": [
+        "babel-plugin-transform-runtime"
+      ],
+      "allowedVersions": "<=6"
+    },
+    {
+      "packageNames": [
+        "babel-preset-env"
+      ],
+      "allowedVersions": "<=1"
+    },
+    {
+      "packageNames": [
+        "babel-preset-react"
+      ],
+      "allowedVersions": "<=6"
+    },
+    {
+      "packageNames": [
+        "clean-webpack-plugin"
+      ],
+      "allowedVersions": "<=1"
+    },
+    {
+      "packageNames": [
+        "copy-webpack-plugin"
+      ],
+      "allowedVersions": "<=5"
+    },
+    {
+      "packageNames": [
+        "css-loader"
+      ],
+      "allowedVersions": "<=2"
+    },
+    {
+      "packageNames": [
+        "eslint"
+      ],
+      "allowedVersions": "<=5"
+    },
+    {
+      "packageNames": [
+        "eslint-config-prettier"
+      ],
+      "allowedVersions": "<=3"
+    },
+    {
+      "packageNames": [
+        "eslint-config-rex-react-component"
+      ],
+      "allowedVersions": "<=1"
+    },
+    {
+      "packageNames": [
+        "eslint-loader"
+      ],
+      "allowedVersions": "<=2"
+    },
+    {
+      "packageNames": [
+        "eslint-plugin-prettier"
+      ],
+      "allowedVersions": "<=3"
+    },
+    {
+      "packageNames": [
+        "http-server"
+      ],
+      "allowedVersions": "<=0"
+    },
+    {
+      "packageNames": [
+        "husky"
+      ],
+      "allowedVersions": "<=1"
+    },
+    {
+      "packageNames": [
+        "lint-staged"
+      ],
+      "allowedVersions": "<=8"
+    },
+    {
+      "packageNames": [
+        "mini-css-extract-plugin"
+      ],
+      "allowedVersions": "<=0"
+    },
+    {
+      "packageNames": [
+        "node-sass"
+      ],
+      "allowedVersions": "<=4"
+    },
+    {
+      "packageNames": [
+        "optimize-css-assets-webpack-plugin"
+      ],
+      "allowedVersions": "<=5"
+    },
+    {
+      "packageNames": [
+        "prettier"
+      ],
+      "allowedVersions": "<=1"
+    },
+    {
+      "packageNames": [
+        "sass-loader"
+      ],
+      "allowedVersions": "<=7"
+    },
+    {
+      "packageNames": [
+        "storybook-inspecthtml"
+      ],
+      "allowedVersions": "<=0"
+    },
+    {
+      "packageNames": [
+        "style-loader"
+      ],
+      "allowedVersions": "<=0"
+    },
+    {
+      "packageNames": [
+        "webpack"
+      ],
+      "allowedVersions": "<=4"
+    },
+    {
+      "packageNames": [
+        "webpack-cli"
+      ],
+      "allowedVersions": "<=3"
+    },
+    {
+      "packageNames": [
+        "webpack-merge"
+      ],
+      "allowedVersions": "<=4"
+    }
   ]
 }
