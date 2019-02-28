@@ -3,24 +3,34 @@ import React from 'react';
 import MyComponent from '../MyComponent';
 
 describe('<MyComponent />', () => {
-  let params;
-  let makeSubject;
-  beforeAll(() => {
-    params = {
-      text: 'Hello ReX React Component Starter Kit!!',
-    };
+  const params = {
+    text: 'Hello ReX React Component Starter Kit!!',
+  };
+  const makeSubject = (props, children) =>
+    shallow(<MyComponent {...props}>{children}</MyComponent>);
 
-    makeSubject = (props = params, children) =>
-      shallow(<MyComponent {...props}>{children}</MyComponent>);
+  beforeEach(() => {
+    jest.resetModules();
   });
-  beforeEach(() => {});
 
   it('should match snapshot', () => {
-    const component = makeSubject();
+    const component = makeSubject(params);
     expect(component.html()).toMatchSnapshot();
   });
 
-  it('should render props', () => {
+  it('should render default-props', () => {
+    const component = makeSubject();
+
+    // Text
+    expect(component.text()).toBe('Welcome to React');
+    // className
+    expect(component.hasClass('my-component')).toBe(true);
+    // click, no side-effect
+    const clickedComponent = component.simulate('click');
+    expect(clickedComponent).toBe(component);
+  });
+
+  it('should render passed props', () => {
     const component = makeSubject({
       text: 'Hello Jest Test!!',
       className: 'my-custom-class',
@@ -38,13 +48,13 @@ describe('<MyComponent />', () => {
       onClick: clickHandler,
     });
 
-    component.simulate('click');
+    component.find('div').simulate('click');
     expect(clickHandler).toHaveBeenCalled();
   });
 
   it('should render a child', () => {
-    const component = makeSubject({}, <div>nono</div>);
-    expect(component.contains(<div>nono</div>)).toBe(true);
+    const component = makeSubject(params, <div>child</div>);
+    expect(component.contains(<div>child</div>)).toBe(true);
 
     // Same as above:
     const wrapper = shallow(
