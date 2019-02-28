@@ -1,8 +1,9 @@
 # ReX React UI Components Library
+
 ## ReX React UI Component: rex-react-component-starter-kit
 
-This project is part of ReX Design Language and it can be used to create React UI Components.   
-For more information visit:   
+This project is part of ReX Design Language and it can be used to create React UI Components.  
+For more information visit:
 
 Github  
 https://github.com/rakuten-frontend
@@ -10,7 +11,7 @@ https://github.com/rakuten-frontend
 NPM  
 https://www.npmjs.com/org/rakuten-frontend
 
-## How it was built 
+## How it was built
 
 1. Build tool: webpack 4
 1. Codebase: Fork of Bootstrap project + ReX custom styles
@@ -25,15 +26,15 @@ npm install rex-react-component-starter-kit@1.8.1 --save
 
 ## What you can do
 
-This project is a started kit, it contains the settings to start the creations of a React component and publish it to NPM.   
+This project is a started kit, it contains the settings to start the creations of a React component and publish it to NPM.
 
-Use it as a basement and reference for your own project and customize it as you will.  
+Use it as a basement and reference for your own project and customize it as you will.
 
 If you need a full environment to create a React Web App, try the react-create-app to get a full environment for your App or use any other started kit.
 
 ### Live examples
 
-For a complete guide of properties for React and HTML classes please visit the Storybook site:  
+For a complete guide of properties for React and HTML classes please visit the Storybook site:
 
 https://rakuten-frontend.github.io/rex-react-component-starter-kit/
 
@@ -41,9 +42,9 @@ https://rakuten-frontend.github.io/rex-react-component-starter-kit/
 
 #### React component (JavaScript + CSS Styles)
 
-For plug and play components integration.   
+For plug and play components integration.
 
-Example: 
+Example:
 
 ```js
 import 'rex-core'; // ReX Core dependency
@@ -58,7 +59,7 @@ function MyComponent() {
 
 For your own JavaScript integration (React, Vue, Angular, etc.) or Static HTML.
 
-Example: 
+Example:
 
 ```js
 import 'rex-core/css'; // ReX Core dependency
@@ -91,7 +92,7 @@ For production mode:
 <link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.8.1/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
 ```
 
-Example: 
+Example:
 
 ```markdown
 <div class="rex-css-style my-component">
@@ -101,15 +102,36 @@ Example:
 
 ## How to start the project
 
-The development environment is based on Storybook, for more info visit https://storybook.js.org/ .   
+The development environment is based on Storybook, for more info visit https://storybook.js.org/ .
 
 ```
 npm start
 ```
 
+## How to test
+
+This starter kit includes `jest` and `enzyme` for unit testing.
+
+```
+# Run test once
+npm run test
+
+# Watch mode
+npm run test -- -watch
+
+# Report coverage
+npm run test -- -coverage
+```
+
+### How to update snapshots
+
+```
+npm run test -- -u
+```
+
 ## How to build
 
-The build task will generate a NPM package ready to be published and also a static version of Storybook, one folder for NPM `./build/node_modules/rex-react-component-starter-kit` and other one for Github pages `./docs`.   
+The build task will generate a NPM package ready to be published and also a static version of Storybook, one folder for NPM `./build/node_modules/rex-react-component-starter-kit` and other one for Github pages `./docs`.
 
 ```
 npm run build
@@ -124,6 +146,7 @@ npm run serve
 ```
 
 ## How to publish to NPM
+
 ### Build the project
 
 ```
@@ -141,7 +164,7 @@ npm login
 npm publish
 ```
 
-Once the process finish, take a look to the NPM site:   
+Once the process finish, take a look to the NPM site:
 
 https://www.npmjs.com/package/rex-react-component-starter-kit
 
@@ -150,23 +173,29 @@ https://www.npmjs.com/package/rex-react-component-starter-kit
 Take a look to this nice documentation pages to be more familiar with React and modern Javascript:
 
 ### Official site
-https://reactjs.org/docs/getting-started.html   
+
+https://reactjs.org/docs/getting-started.html
 
 ### Google Web Fundamentals (the whole site is a must to read)
+
 https://developers.google.com/web/fundamentals/
 
 ### Webpack as magic bundler
+
 https://webpack.js.org/
 
 ### Composing Software series (how to understand Funcional Programming)
-https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea   
+
+https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea
 
 ### Common React patterns
-https://reactpatterns.com   
+
+https://reactpatterns.com
 
 ### Understanding Storybook with nice images
-https://blog.hichroma.com/the-delightful-storybook-workflow-b322b76fd07   
+
+https://blog.hichroma.com/the-delightful-storybook-workflow-b322b76fd07
 
 ### Some guidelines for clean code
-https://americanexpress.io/clean-code-dirty-code/
 
+https://americanexpress.io/clean-code-dirty-code/
