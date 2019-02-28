@@ -65,17 +65,11 @@ const extracCssLoader = {
 // Translates CSS into CommonJS
 const cssLoader = {
   loader: 'css-loader',
-  options: {
-    includePaths: [pathSrc, pathNodeModules],
-  },
 };
 
 // Compiles Sass to CSS
 const sassLoader = {
   loader: 'sass-loader',
-  options: {
-    includePaths: [pathSrc],
-  },
 };
 
 // Styles loader for Css and Sass
