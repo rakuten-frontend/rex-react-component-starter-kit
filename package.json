@@ -4,7 +4,7 @@
   "description": "ReX React UI Component",
   "main": "src/MyComponent.jsx",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
     "init:component": "node init.js && npm i && npm start",
     "start": "npm run storybook",
     "build": "npm run build:component && npm run build:storybook",
@@ -39,7 +39,8 @@
   "lint-staged": {
     "src/*.{js,jsx}": [
       "eslint --fix",
-      "git add"
+      "git add",
+      "jest --bail --findRelatedTests"
     ]
   },
   "devDependencies": {
