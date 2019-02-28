@@ -118,9 +118,6 @@ npm run test
 
 # Watch mode
 npm run test -- -watch
-
-# Report coverage
-npm run test -- -coverage
 ```
 
 ### How to update snapshots
@@ -128,6 +125,14 @@ npm run test -- -coverage
 ```
 npm run test -- -u
 ```
+
+### How to report code coverage
+
+```
+npm run test -- -coverage
+```
+
+and coverage report will be generated under `./coverage/` directory.
 
 ## How to build
 
