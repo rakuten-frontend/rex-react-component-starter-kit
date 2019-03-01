@@ -114,22 +114,22 @@ This starter kit includes `jest` and `enzyme` for unit testing.
 
 ```
 # Run test once
-npm run test
+npm test
 
 # Watch mode
-npm run test -- -watch
+npm test -- -watch
 ```
 
 ### How to update snapshots
 
 ```
-npm run test -- -u
+npm test -- -u
 ```
 
 ### How to report code coverage
 
 ```
-npm run test -- -coverage
+npm test -- -coverage
 ```
 
 and coverage report will be generated under `./coverage/` directory.
