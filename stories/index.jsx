@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withInspectHtml } from 'storybook-inspecthtml';
-import { CenterDecorator } from '../.storybook/centerDecorator';
+import CenterDecorator from '../.storybook/centerDecorator';
 import 'rex-core';
 
 const MyComponent =

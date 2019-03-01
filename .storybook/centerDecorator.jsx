@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CenterDecorator(storyFn) {
+export default function CenterDecorator(storyFn) {
   const container = {
     padding: '2% 5% 2% 5%',
   };
@@ -83,7 +83,3 @@ function CenterDecorator(storyFn) {
     </div>
   );
 }
-
-module.exports = {
-  CenterDecorator: CenterDecorator
-};
