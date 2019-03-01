@@ -117,7 +117,7 @@ This starter kit includes `jest` and `enzyme` for unit testing.
 npm test
 
 # Watch mode
-npm test -- -watch
+npm test -- --watch
 ```
 
 ### How to update snapshots
@@ -129,10 +129,10 @@ npm test -- -u
 ### How to report code coverage
 
 ```
-npm test -- -coverage
+npm test -- --coverage
 ```
 
-and coverage report will be generated under `./coverage/` directory.
+and you can find your coverage report in `./coverage/` directory.
 
 ## How to build
 
