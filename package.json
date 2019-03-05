@@ -5,7 +5,8 @@
   "main": "src/MyComponent.jsx",
   "scripts": {
     "test": "jest",
-    "init:component": "node init.js && npm i && npm start",
+    "test-upgrade": "npm test -- -u",
+    "init:component": "node init.js && npm i && npm run test-upgrade && npm start",
     "start": "npm run storybook",
     "build": "npm run test & npm run build:component && npm run build:storybook",
     "build:patch": "npm --no-git-tag-version version patch && npm run build && npm run commit",
