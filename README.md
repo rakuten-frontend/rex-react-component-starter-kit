@@ -20,7 +20,7 @@ https://www.npmjs.com/org/rakuten-frontend
 # How to install
 
 ```
-npm install rex-react-component-starter-kit@1.9.0 --save
+npm install rex-react-component-starter-kit@1.9.1 --save
 ```
 
 ## What you can do
@@ -77,18 +77,18 @@ For development mode:
 
 ```markdown
 <!-- ReX Core -->
-<link href="https://r.r10s.jp/com/rex/rex-core/^1.4.0/rex-core.development.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.development.css" rel="stylesheet">
 <!-- rex-react-component-starter-kit -->
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.9.0/rex-react-component-starter-kit.development.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.9.1/rex-react-component-starter-kit.development.css" rel="stylesheet">
 ```
 
 For production mode:
 
 ```markdown
 <!-- ReX Core -->
-<link href="https://r.r10s.jp/com/rex/rex-core/^1.4.0/rex-core.production.min.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.production.min.css" rel="stylesheet">
 <!-- rex-react-component-starter-kit -->
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.9.0/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.9.1/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
 ```
 
 Example: 
@@ -144,6 +144,32 @@ npm publish
 Once the process finish, take a look to the NPM site:   
 
 https://www.npmjs.com/package/rex-react-component-starter-kit
+
+## How to test
+
+This starter kit includes `jest` and `enzyme` for unit testing.
+
+```
+# Run test once
+npm test
+
+# Watch mode
+npm test -- -watch
+```
+
+### How to update snapshots
+
+```
+npm test -- -u
+```
+
+### How to report code coverage
+
+```
+npm test -- -coverage
+```
+
+and coverage report will be generated under `./coverage/` directory.
 
 ## Javascript and React related documents
 

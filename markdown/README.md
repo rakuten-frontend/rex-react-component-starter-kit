@@ -145,6 +145,32 @@ Once the process finish, take a look to the NPM site:
 
 https://www.npmjs.com/package/__COMPONENT_NAME__
 
+## How to test
+
+This starter kit includes `jest` and `enzyme` for unit testing.
+
+```
+# Run test once
+npm test
+
+# Watch mode
+npm test -- -watch
+```
+
+### How to update snapshots
+
+```
+npm test -- -u
+```
+
+### How to report code coverage
+
+```
+npm test -- -coverage
+```
+
+and coverage report will be generated under `./coverage/` directory.
+
 ## Javascript and React related documents
 
 Take a look to this nice documentation pages to be more familiar with React and modern Javascript:
