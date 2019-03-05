@@ -69,19 +69,18 @@ describe('<MyComponent />', () => {
     ).toBe(true);
   });
 
-  // MEMO: Now multiple-children is not allowed
-  // it('should render children', () => {
-  //   const wrapper = shallow(
-  //     <MyComponent>
-  //       <p className="child">I am a child</p>
-  //       <span className="child">I am a child, too</span>
-  //     </MyComponent>
-  //   );
-  //   expect(
-  //     wrapper.containsAllMatchingElements([
-  //       <p className="child">I am a child</p>,
-  //       <span className="child">I am a child, too</span>,
-  //     ])
-  //   ).toBe(true);
-  // });
+  it('should render children', () => {
+    const wrapper = shallow(
+      <MyComponent>
+        <p className="child">I am a child</p>
+        <span className="child">I am a child, too</span>
+      </MyComponent>
+    );
+    expect(
+      wrapper.containsAllMatchingElements([
+        <p className="child">I am a child</p>,
+        <span className="child">I am a child, too</span>,
+      ])
+    ).toBe(true);
+  });
 });
