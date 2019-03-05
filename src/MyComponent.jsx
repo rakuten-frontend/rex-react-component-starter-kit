@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, func, element, oneOfType } from 'prop-types';
+import { string, func, element, oneOfType, arrayOf } from 'prop-types';
 import './MyComponent.scss';
 
 export default function MyComponent({ children, onClick, text, className }) {
@@ -19,7 +19,7 @@ MyComponent.defaultProps = {
 };
 
 MyComponent.propTypes = {
-  children: oneOfType([string, element]),
+  children: oneOfType([string, element, arrayOf(element)]),
   text: string,
   className: string,
   onClick: func,
