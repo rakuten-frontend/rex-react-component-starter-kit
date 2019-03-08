@@ -9,7 +9,7 @@
     "test:coverage": "npm test -- --coverage",
     "init:component": "node init.js && npm i && npm run test:upgrade && npm start",
     "start": "npm run storybook",
-    "build": "npm run test & npm run build:component && npm run build:storybook",
+    "build": "npm run build:component && npm run build:storybook",
     "build:patch": "npm --no-git-tag-version version patch && npm run build && npm run commit",
     "build:minor": "npm --no-git-tag-version version minor && npm run build && npm run commit",
     "build:major": "npm --no-git-tag-version version major && npm run build && npm run commit",
