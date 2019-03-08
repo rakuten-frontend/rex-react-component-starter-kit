@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CenterDecorator(storyFn) {
   const container = {
-    padding: '2% 5% 2% 5%',
+    padding: '10px 10px 10px 10px',
   };
 
   const contentContainer = {
