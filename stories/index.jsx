@@ -43,3 +43,15 @@ stories.add('with dynamic props', () => {
 
   return <MyComponent text={textWelcome} />;
 });
+
+const storiesTest = storiesOf('MyComponent TEST', module);
+storiesTest.addDecorator(withInspectHtml);
+storiesTest.addDecorator(CenterDecorator);
+storiesTest.addDecorator(checkA11y);
+storiesTest.addDecorator(withKnobs);
+
+storiesTest.add('with dynamic props', () => {
+  const textWelcome = text('text', 'Welcome to Dynamic React');
+
+  return <MyComponent text={textWelcome} />;
+});
