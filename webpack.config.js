@@ -34,7 +34,7 @@ const output = {
   library: libraryName,
   libraryTarget: 'umd',
   umdNamedDefine: true,
-  jsonpFunction: `${libraryName}OnDemand`
+  jsonpFunction: `${libraryName}OnDemand`,
 };
 
 // Eslint
