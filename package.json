@@ -19,7 +19,7 @@
     "commit:docs": "git add docs README.md && git commit -m 'Added - Docs for github pages and README file'",
     "commit:package": "git add package.json package-lock.json && git commit -m 'New version - v'$npm_package_version",
     "storybook": "NODE_ENV=development ./node_modules/.bin/start-storybook -p 8080 --ci",
-    "serve": "NODE_ENV=production ./node_modules/.bin/http-server -p 8081 ./docs",
+    "serve": "NODE_ENV=production ./node_modules/.bin/http-server ./docs -p 8081",
     "eslint": "eslint --fix './src/*.{js,jsx}'",
     "prettier": "prettier --write './src/*.{js,jsx}'",
     "static": "node static.js"
