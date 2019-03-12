@@ -8,19 +8,38 @@ const rexComponent = `node_modules/${packageInfo.name}/${packageInfo.name}.produ
 const domain = 'http://localhost:8081/';
 const iframe = `${domain}iframe.html`;
 
+console.log(`
+==================================================
+  ReX React Components Starter Kit
+  Static HTML Stories generator
+==================================================
+`);
 // Google Puppeteer script
 (async () => {
+  console.log(`
+    Starting Google's Puppeteer ...
+  `);
   // Start session
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   // Clean output folder
   await setOutputFolder(htmlFolder, rexCore, rexComponent);
+  console.log(`
+    Setting output folder ${htmlFolder}
+  `);
 
   // Start navigation
+  console.log(`
+    Starting navigation at ${domain}
+  `);
+
   await page.goto(domain);
 
   // Open all Stories links from menu item
+  console.log(`
+    Getting stories HTML content
+  `);
   const storiesOfList = await page.$$('div[role="menuitem"]');
 
   for (let storyOf of storiesOfList) {
@@ -51,7 +70,7 @@ const iframe = `${domain}iframe.html`;
       rexComponent,
     );
     await generateScreenshots(page, story.pngFilename);
-   
+
     storyInfoList.push({
       'url': `/html/${story.htmlFilename}`,
       'name': story.storyName,
@@ -59,11 +78,11 @@ const iframe = `${domain}iframe.html`;
   }
 
   const staticHTMLStoryLinks = storyInfoList.map((item, index, list) => {
-    return `${index == 0 ? '<ol>' : '' }
+    return `${index == 0 ? '<ol>' : ''}
       <li>
         <a href="${item.url}">${item.name}</a>
       </li>
-    ${index == (list.length - 1) ? '</ol>' : '' }
+    ${index == (list.length - 1) ? '</ol>' : ''}
     `;
   }).join('');
 
@@ -87,6 +106,13 @@ const iframe = `${domain}iframe.html`;
 
   // Close session
   await browser.close();
+
+  console.log(`
+  Static HTML stories are available at 
+  
+  http://localhost:8081/html
+
+  `);
 })();
 
 async function generateScreenshots(page, fileName) {
@@ -231,6 +257,8 @@ async function createHTMLFile(
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
           <title>${title}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="shortcut icon" href="https://jp.rakuten-static.com/1/im/ci/rakuten/favicon/cr.ico">
+          <link rel="mask-icon" href="https://jp.rakuten-static.com/1/im/ci/rakuten/favicon/Rakuten_SafariPin.svg" color="#bf0000">
           <link rel="stylesheet" href="/html/${rexCore}">
           ${componenStyle}
       </head>
@@ -243,6 +271,7 @@ async function createHTMLFile(
   try {
     const filePath = `${htmlFolder}/${htmlFilename}`;
     await fse.outputFileSync(filePath, htmlTemplate);
+    console.log(`HTML File created: ${filePath}`);
 
     return true;
   } catch (error) {
