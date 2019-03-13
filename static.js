@@ -72,7 +72,7 @@ console.log(`
     await generateScreenshots(page, story.pngFilename);
 
     storyInfoList.push({
-      'url': `/html/${story.htmlFilename}`,
+      'url': story.htmlFilename,
       'name': story.storyName,
     });
   }
@@ -249,7 +249,7 @@ async function createHTMLFile(
   rexComponent,
   printComponent = true
 ) {
-  const componenStyle = printComponent ? `<link rel="stylesheet" href="/html/${rexComponent}">` : '';
+  const componenStyle = printComponent ? `<link rel="stylesheet" href="${rexComponent}">` : '';
   const htmlTemplate = `<!doctype html>
   <html lang="en">
       <head>
@@ -259,7 +259,7 @@ async function createHTMLFile(
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="shortcut icon" href="https://jp.rakuten-static.com/1/im/ci/rakuten/favicon/cr.ico">
           <link rel="mask-icon" href="https://jp.rakuten-static.com/1/im/ci/rakuten/favicon/Rakuten_SafariPin.svg" color="#bf0000">
-          <link rel="stylesheet" href="/html/${rexCore}">
+          <link rel="stylesheet" href="${rexCore}">
           ${componenStyle}
       </head>
       <body>
