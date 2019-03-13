@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ClosureCompiler = require('google-closure-compiler-js').webpack;
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 const packageInfo = require('./package.json');
 
 const libraryName = packageInfo.name
@@ -72,10 +73,17 @@ const sassLoader = {
   loader: 'sass-loader',
 };
 
+const postCssLoader = {
+  loader: 'postcss-loader',
+  options: {
+    plugins: [autoprefixer],
+  },
+};
+
 // Styles loader for Css and Sass
 const stylesLoader = {
   test: /\.(css|scss)$/,
-  use: [extracCssLoader, cssLoader, sassLoader],
+  use: [extracCssLoader, cssLoader, postCssLoader, sassLoader],
 };
 
 const fileLoader = {
