@@ -20,7 +20,7 @@ https://www.npmjs.com/org/rakuten-frontend
 # How to install
 
 ```
-npm install rex-react-component-starter-kit@1.10.1 --save
+npm install rex-react-component-starter-kit@1.10.2 --save
 ```
 
 ## What you can do
@@ -79,7 +79,7 @@ For development mode:
 <!-- ReX Core -->
 <link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.development.css" rel="stylesheet">
 <!-- rex-react-component-starter-kit -->
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.10.1/rex-react-component-starter-kit.development.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.10.2/rex-react-component-starter-kit.development.css" rel="stylesheet">
 ```
 
 For production mode:
@@ -88,7 +88,7 @@ For production mode:
 <!-- ReX Core -->
 <link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.production.min.css" rel="stylesheet">
 <!-- rex-react-component-starter-kit -->
-<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.10.1/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-react-component-starter-kit/1.10.2/rex-react-component-starter-kit.production.min.css" rel="stylesheet">
 ```
 
 Example: 
