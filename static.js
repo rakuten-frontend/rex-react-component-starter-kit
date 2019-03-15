@@ -152,22 +152,22 @@ async function generateScreenshots(page, fileName) {
   };
 
   await page.setViewport(iPhone5SE);
-  await page.screenshot({ path: `${htmlFolder}/screenshots/iPhone5SE/${fileName}` });
+  await page.screenshot({ path: `${htmlFolder}/screenshots/iPhone5SE/iPhone5SE_${fileName}` });
 
   await page.setViewport(iPhone8);
-  await page.screenshot({ path: `${htmlFolder}/screenshots/iPhone8/${fileName}` });
+  await page.screenshot({ path: `${htmlFolder}/screenshots/iPhone8/iPhone8_${fileName}` });
 
   await page.setViewport(iPhone8Plus);
-  await page.screenshot({ path: `${htmlFolder}/screenshots/iPhone8Plus/${fileName}` });
+  await page.screenshot({ path: `${htmlFolder}/screenshots/iPhone8Plus/iPhone8Plus_${fileName}` });
 
   await page.setViewport(iPad);
-  await page.screenshot({ path: `${htmlFolder}/screenshots/iPad/${fileName}` });
+  await page.screenshot({ path: `${htmlFolder}/screenshots/iPad/iPad_${fileName}` });
 
   await page.setViewport(laptopMDPI);
-  await page.screenshot({ path: `${htmlFolder}/screenshots/laptopMDPI/${fileName}` });
+  await page.screenshot({ path: `${htmlFolder}/screenshots/laptopMDPI/laptopMDPI_${fileName}` });
 
   await page.setViewport(laptopHiDPI);
-  await page.screenshot({ path: `${htmlFolder}/screenshots/laptopHiDPI/${fileName}` });
+  await page.screenshot({ path: `${htmlFolder}/screenshots/laptopHiDPI/laptopHiDPI_${fileName}` });
 
   return true;
 }
