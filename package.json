@@ -9,7 +9,7 @@
     "test:coverage": "npm test -- --coverage",
     "init:component": "node init.js && npm i && npm run test:upgrade && npm start",
     "start": "npm run storybook",
-    "build": "npm run build:component && npm run build:storybook",
+    "build": "npm run build:component && npm run build:storybook && npm run static",
     "build:patch": "npm --no-git-tag-version version patch && npm run build && npm run commit",
     "build:minor": "npm --no-git-tag-version version minor && npm run build && npm run commit",
     "build:major": "npm --no-git-tag-version version major && npm run build && npm run commit",
@@ -19,10 +19,10 @@
     "commit:docs": "git add docs README.md && git commit -m 'Added - Docs for github pages and README file'",
     "commit:package": "git add package.json package-lock.json && git commit -m 'New version - v'$npm_package_version",
     "storybook": "NODE_ENV=development ./node_modules/.bin/start-storybook -p 8080 --ci",
-    "serve": "NODE_ENV=production ./node_modules/.bin/http-server ./docs -p 8081",
+    "serve": "NODE_ENV=production ./node_modules/.bin/http-server ./docs -p 8081 &",
     "eslint": "eslint --fix './src/*.{js,jsx}'",
     "prettier": "prettier --write './src/*.{js,jsx}'",
-    "static": "node static.js"
+    "static": "npm run serve && ttab node static.js"
   },
   "repository": {
     "type": "git",
@@ -89,6 +89,7 @@
     "sass-loader": "^7.1.0",
     "storybook-inspecthtml": "^0.0.4",
     "style-loader": "^0.23.1",
+    "ttab": "^0.6.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
