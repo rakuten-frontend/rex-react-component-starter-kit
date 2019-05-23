@@ -42,8 +42,7 @@
   "lint-staged": {
     "src/*.{js,jsx}": [
       "eslint --fix",
-      "git add",
-      "jest --bail --findRelatedTests"
+      "git add"
     ]
   },
   "devDependencies": {
@@ -99,6 +98,7 @@
     "react-dom": "^16.8.3",
     "react-id-swiper": "^2.1.2",
     "rex-core": "^1.4.0",
+    "rex-icons": "^1.2.1",
     "rex-react-utils": "^1.0.1",
     "swiper": "^4.5.0"
   }
