@@ -8,38 +8,38 @@ import { withInspectHtml } from 'storybook-inspecthtml';
 import CenterDecorator from '../.storybook/centerDecorator';
 import 'rex-core';
 
-const MyComponent =
+const Carousel =
   process.env.NODE_ENV === 'production'
-    ? require('../build/node_modules/rex-react-component-starter-kit').default
-    : require('../src/MyComponent').default;
+    ? require('../build/node_modules/rex-carousel').default
+    : require('../src/Carousel').default;
 
-const stories = storiesOf('MyComponent', module);
+const stories = storiesOf('Carousel', module);
 stories.addDecorator(withInspectHtml);
 stories.addDecorator(CenterDecorator);
 stories.addDecorator(checkA11y);
 stories.addDecorator(withKnobs);
 
 // Stories
-stories.add('default', () => <MyComponent />);
-stories.add('with text', () => <MyComponent text="Welcome to React example" />);
+stories.add('default', () => <Carousel />);
+stories.add('with text', () => <Carousel text="Welcome to React example" />);
 stories.add('with className', () => (
-  <MyComponent className="color-black active" />
+  <Carousel className="color-black active" />
 ));
 
 stories.add('with onClick', () => {
   const onClickSample = action('clicked');
 
-  return <MyComponent onClick={onClickSample} />;
+  return <Carousel onClick={onClickSample} />;
 });
 
 stories.add('with children', () => (
-  <MyComponent>
+  <Carousel>
     <p>Hello World</p>
-  </MyComponent>
+  </Carousel>
 ));
 
 stories.add('with dynamic props', () => {
   const textWelcome = text('text', 'Welcome to Dynamic React');
 
-  return <MyComponent text={textWelcome} />;
+  return <Carousel text={textWelcome} />;
 });

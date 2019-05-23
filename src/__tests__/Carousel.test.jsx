@@ -1,13 +1,13 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import MyComponent from '../MyComponent';
+import Carousel from '../Carousel';
 
-describe('<MyComponent />', () => {
+describe('<Carousel />', () => {
   const params = {
     text: 'Hello ReX React Component Starter Kit!!',
   };
   const makeSubject = (props, children) =>
-    shallow(<MyComponent {...props}>{children}</MyComponent>);
+    shallow(<Carousel {...props}>{children}</Carousel>);
 
   beforeEach(() => {
     jest.resetModules();
@@ -24,7 +24,7 @@ describe('<MyComponent />', () => {
     // Text
     expect(component.text()).toBe('Welcome to React');
     // className
-    expect(component.hasClass('my-component')).toBe(true);
+    expect(component.hasClass('rex-carousel')).toBe(true);
     // click, no side-effect
     const clickedComponent = component.simulate('click');
     expect(clickedComponent).toBe(component);
@@ -58,9 +58,9 @@ describe('<MyComponent />', () => {
 
     // Same as above:
     const wrapper = shallow(
-      <MyComponent>
+      <Carousel>
         <p className="child">I am a child</p>
-      </MyComponent>
+      </Carousel>
     );
     expect(
       wrapper.containsAllMatchingElements([
@@ -71,10 +71,10 @@ describe('<MyComponent />', () => {
 
   it('should render children', () => {
     const wrapper = shallow(
-      <MyComponent>
+      <Carousel>
         <p className="child">I am a child</p>
         <span className="child">I am a child, too</span>
-      </MyComponent>
+      </Carousel>
     );
     expect(
       wrapper.containsAllMatchingElements([

@@ -1,8 +1,8 @@
 {
-  "name": "rex-react-component-starter-kit",
-  "version": "1.10.2",
+  "name": "rex-carousel",
+  "version": "0.0.1",
   "description": "ReX React UI Component",
-  "main": "src/MyComponent.jsx",
+  "main": "src/Carousel.jsx",
   "scripts": {
     "test": "jest",
     "test:upgrade": "npm test -- -u",
@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rakuten-frontend/rex-react-component-starter-kit.git"
+    "url": "https://github.com/rakuten-frontend/rex-carousel.git"
   },
-  "author": "ReX React UI Components Library Authors (https://github.com/rakuten-frontend/rex-react-component-starter-kit/graphs/contributors)",
+  "author": "ReX React UI Components Library Authors (https://github.com/rakuten-frontend/rex-carousel/graphs/contributors)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rakuten-frontend/rex-react-component-starter-kit/issues"
+    "url": "https://github.com/rakuten-frontend/rex-carousel/issues"
   },
-  "homepage": "https://rakuten-frontend.github.io/rex-react-component-starter-kit/",
+  "homepage": "https://rakuten-frontend.github.io/rex-carousel/",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -97,7 +97,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-id-swiper": "^2.1.2",
     "rex-core": "^1.4.0",
-    "rex-react-utils": "^1.0.1"
+    "rex-react-utils": "^1.0.1",
+    "swiper": "^4.5.0"
   }
 }
