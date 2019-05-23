@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, func, element, oneOfType, arrayOf } from 'prop-types';
-import './MyComponent.scss';
+import './Carousel.scss';
 
-export default function MyComponent({ children, onClick, text, className }) {
+export default function Carousel({ children, onClick, text, className }) {
   return (
     <div className={className} onClick={onClick} role="presentation">
       <h1>{text}</h1>
@@ -11,14 +11,14 @@ export default function MyComponent({ children, onClick, text, className }) {
   );
 }
 
-MyComponent.defaultProps = {
+Carousel.defaultProps = {
   children: null,
   text: 'Welcome to React',
-  className: 'my-component',
+  className: 'rex-carousel',
   onClick: () => null,
 };
 
-MyComponent.propTypes = {
+Carousel.propTypes = {
   children: oneOfType([string, element, arrayOf(element)]),
   text: string,
   className: string,

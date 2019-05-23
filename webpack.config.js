@@ -17,7 +17,7 @@ const pathRoot = pathResolve('./');
 
 // Webpack entry and output settings
 const entry = {};
-entry[packageInfo.name] = './src/MyComponent.jsx';
+entry[packageInfo.name] = './src/Carousel.jsx';
 
 // Webpack config
 const mode = 'production';
